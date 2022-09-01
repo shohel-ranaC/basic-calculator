@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Basic Calculator</h1>
+    <table class="container-fluid text-center">
+    <tr>
+    <td><input type="button" value="c" onclick="clr()"/> </td>
+    <td colspan="3"><input type="text" id="displayResult"/></td>
+    <!-- clr() function will call clr to clear all value -->
+    </tr>
+    <tr>
+    <!-- creating buttons and assigning values-->
+    <td><input type="button" value="+" onclick="dis('+')"/> </td>
+    <td><input type="button" value="1" onclick="dis('1')"/> </td>
+    <td><input type="button" value="2" onclick="dis('2')"/> </td>
+    <td><input type="button" value="3" onclick="dis('3')"/> </td>
+    </tr>
+    <tr>
+    <td><input type="button" value="-" onclick="dis('-')"/> </td>
+    <td><input type="button" value="4" onclick="dis('4')"/> </td>
+    <td><input type="button" value="5" onclick="dis('5')"/> </td>
+    <td><input type="button" value="6" onclick="dis('6')"/> </td>
+    </tr>
+    <tr>
+    <td><input type="button" value="*" onclick="dis('*')"/> </td>
+    <td><input type="button" value="7" onclick="dis('7')"/> </td>
+    <td><input type="button" value="8" onclick="dis('8')"/> </td>
+    <td><input type="button" value="9" onclick="dis('9')"/> </td>
+    </tr>
+    <tr>
+    <td><input type="button" value="/" onclick="dis('/')"/> </td>
+    <td><input type="button" value="." onclick="dis('.')"/> </td>
+    <td><input type="button" value="0" onclick="dis('0')"/> </td>
+    <!-- Evaluating function call eval()-->
+    <td><input type="button" value="=" onclick="result()"/> </td>
+    </tr>
+    </table>
+  </div>
+
+    <script>
+      function clr(){
+        document.getElementById("displayResult").value = "";
+      }
+      function dis(newValue){
+        document.getElementById("displayResult").value += newValue;
+      }
+      function result(){
+        let calculate = document.getElementById("displayResult").value;
+        let calculateResult = eval(calculate);
+        document.getElementById("displayResult").value = calculateResult;
+      }
+   
+    </script>
+  </body>
+</html>

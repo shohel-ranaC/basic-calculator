@@ -1,0 +1,20 @@
+.container{
+  margin: 100px;
+}
+table{
+  padding: 10px;
+
+}
+table tr, td{
+  padding: 3px;
+ color: white;
+ background-color: black;
+}
+input{
+  background-image: linear-gradient(45deg, rgb(231, 10, 194), orange);
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
